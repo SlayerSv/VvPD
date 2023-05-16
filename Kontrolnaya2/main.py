@@ -50,9 +50,7 @@ def need_to_move(input):
                     i += 1
                 else:
                     slice_brackets1 = brackets[:i]
-                    print(slice_brackets1)
                     slice_brackets2 = brackets[i + 1:]
-                    print(slice_brackets2)
                     brackets = slice_brackets1 + slice_brackets2 + ')'
                     moved_brackets += 1
                     i = 0
