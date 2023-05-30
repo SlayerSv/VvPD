@@ -43,7 +43,6 @@ def is_right_triangle(first_side, second_side, third_side, rounding):
             hypotenuse = second_side
             katet_a = first_side
             katet_b = third_side
-    print()
     if m.sqrt(round(m.pow(hypotenuse, 2), rounding))\
             == m.sqrt(m.pow(katet_a, 2) + m.pow(katet_b, 2)):
         return True
@@ -75,9 +74,9 @@ def input_check_rounding(rounding):
     try:
         rounding = int(rounding)
     except ValueError as exception:
-        raise ValueError("Rounding value must be a number!") from exception
-    if rounding <= 0:
-        raise ValueError("Rounding value must be greater than zero!")
+        raise ValueError("Rounding value must be a whole number!") from exception
+    if rounding < 0:
+        raise ValueError("Rounding value must be a non-negative!")
     return rounding
 
 
